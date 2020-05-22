@@ -19,7 +19,7 @@ export const createPost = (postData) => dispatch => {
         body: JSON.stringify(postData)
     })
     .then(res => res.json())
-    .then(data => post => dispatch({
+    .then(post => dispatch({
         type: NEW_POST,
         payload: post
     }))
